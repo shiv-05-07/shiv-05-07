@@ -1,0 +1,354 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050806" />
+      <stop offset="50%" stop-color="#07120C" />
+      <stop offset="100%" stop-color="#050806" />
+    </linearGradient>
+
+    <!-- Right Feature Card Border Gradient (Blue to Emerald to Rose) -->
+    <linearGradient id="feature-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#00E58B" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <!-- Dot Grid Pattern -->
+    <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.9" fill="#173B2A" opacity="0.75" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="radar-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Holographic Shimmer Sweep (Emerald-Lime-Cyan) -->
+    <linearGradient id="about-shimmer-sweep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E58B" stop-opacity="0" />
+      <stop offset="45%" stop-color="#00E58B" stop-opacity="0.04" />
+      <stop offset="50%" stop-color="#B6FF72" stop-opacity="0.16" />
+      <stop offset="55%" stop-color="#38BDF8" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#00E58B" stop-opacity="0" />
+      <animate attributeName="x1" values="-100%;150%" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0%;250%" dur="5s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <style>
+      @keyframes textFadeInUp {
+        0% { opacity: 0; transform: translateY(14px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      text {
+        animation: textFadeInUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1000" height="560" rx="20" fill="url(#card-bg)" />
+  <rect width="1000" height="560" rx="20" fill="url(#dot-grid)" />
+  <rect x="1" y="1" width="998" height="558" rx="19" fill="none" stroke="#173B2A" stroke-width="1.5" />
+
+  <!-- ========================================== -->
+  <!-- TOP SECTION LABELS                         -->
+  <!-- ========================================== -->
+  <text x="45" y="42" font-family="'JetBrains Mono', monospace" font-size="12" fill="#8A9A90" letter-spacing="2.5" font-weight="700">
+    ./ABOUT.SH — CAPABILITIES
+  </text>
+
+  <text x="545" y="42" font-family="'JetBrains Mono', monospace" font-size="12" fill="#8A9A90" letter-spacing="2.5" font-weight="700">
+    INTERESTS — AUTO-PLAY / 4s
+  </text>
+
+  <!-- ========================================== -->
+  <!-- LEFT COLUMN: 5 CAPABILITY CARDS           -->
+  <!-- ========================================== -->
+
+  <!-- Card 1: Generative AI & LLM Integrations -->
+  <g transform="translate(45, 66)">
+    <rect width="465" height="62" rx="14" fill="#09140E" stroke="#173B2A" stroke-width="1.2" />
+    <!-- Left Accent Stripe: Blue -->
+    <rect x="0" y="12" width="5" height="38" rx="2.5" fill="#38BDF8" filter="url(#neon-glow)" />
+    <text x="24" y="27" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="700" fill="#F2F7F3">
+      Generative AI &amp; local LLMs
+    </text>
+    <text x="24" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A9A90">
+      Voice + text assistants, Gemini SDK, multimodal workflows.
+    </text>
+  </g>
+
+  <!-- Card 2: Full-stack development -->
+  <g transform="translate(45, 140)">
+    <rect width="465" height="62" rx="14" fill="#09140E" stroke="#173B2A" stroke-width="1.2" />
+    <!-- Left Accent Stripe: Red/Rose -->
+    <rect x="0" y="12" width="5" height="38" rx="2.5" fill="#F43F5E" filter="url(#neon-glow)" />
+    <text x="24" y="27" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="700" fill="#F2F7F3">
+      Full-stack development
+    </text>
+    <text x="24" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A9A90">
+      React, Next.js, Node.js, Express, Supabase — built and deployed.
+    </text>
+  </g>
+
+  <!-- Card 3: Problem solving & algorithms -->
+  <g transform="translate(45, 214)">
+    <rect width="465" height="62" rx="14" fill="#09140E" stroke="#173B2A" stroke-width="1.2" />
+    <!-- Left Accent Stripe: Amber -->
+    <rect x="0" y="12" width="5" height="38" rx="2.5" fill="#F59E0B" filter="url(#neon-glow)" />
+    <text x="24" y="27" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="700" fill="#F2F7F3">
+      Problem solving &amp; algorithms
+    </text>
+    <text x="24" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A9A90">
+      C++, logic design, optimization, 2nd CodeRace podium.
+    </text>
+  </g>
+
+  <!-- Card 4: Object-Oriented Systems -->
+  <g transform="translate(45, 288)">
+    <rect width="465" height="62" rx="14" fill="#09140E" stroke="#173B2A" stroke-width="1.2" />
+    <!-- Left Accent Stripe: Cyan/Blue -->
+    <rect x="0" y="12" width="5" height="38" rx="2.5" fill="#38BDF8" filter="url(#neon-glow)" />
+    <text x="24" y="27" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="700" fill="#F2F7F3">
+      Object-Oriented Systems
+    </text>
+    <text x="24" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A9A90">
+      Java 8, Swing, JDBC, SQLite, object-oriented desktop architectures.
+    </text>
+  </g>
+
+  <!-- Card 5: Technical leadership & collaboration -->
+  <g transform="translate(45, 362)">
+    <rect width="465" height="62" rx="14" fill="#09140E" stroke="#173B2A" stroke-width="1.2" />
+    <!-- Left Accent Stripe: Coral/Rose -->
+    <rect x="0" y="12" width="5" height="38" rx="2.5" fill="#EC4899" filter="url(#neon-glow)" />
+    <text x="24" y="27" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="700" fill="#F2F7F3">
+      Technical leadership &amp; collaboration
+    </text>
+    <text x="24" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A9A90">
+      Core Team Member • Code Vimarsh MSU Baroda.
+    </text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BOTTOM STRIP: LEADING                      -->
+  <!-- ========================================== -->
+  <g transform="translate(45, 452)">
+    <text x="0" y="14" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#F59E0B" letter-spacing="2.5">
+      PART OF
+    </text>
+    <text x="0" y="38" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#F2F7F3">
+      Core Team Member • Code Vimarsh MSU Baroda
+    </text>
+    <text x="0" y="58" font-family="'JetBrains Mono', monospace" font-size="11.5" fill="#8A9A90">
+      Vadodara, Gujarat, India
+    </text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- RIGHT COLUMN: AUTO-PLAY FEATURE CARD       -->
+  <!-- ========================================== -->
+  <g transform="translate(545, 66)">
+    <!-- Main Card Body with Multi-color Border -->
+    <rect width="410" height="446" rx="22" fill="#07130D" />
+    <rect width="410" height="446" rx="22" fill="none" stroke="url(#feature-border-grad)" stroke-width="2" />
+
+    <!-- Top Segmented Progress Bars (3 segments) -->
+    <!-- Segment 1 Base -->
+    <rect x="25" y="24" width="105" height="3" rx="1.5" fill="#173B2A" />
+    <!-- Segment 1 Active Indicator (Fills 0s-4s) -->
+    <rect x="25" y="24" width="105" height="3" rx="1.5" fill="#38BDF8">
+      <animate attributeName="width" values="0;105;105;0" keyTimes="0;0.33;0.99;1" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;1;0.4;1" keyTimes="0;0.33;0.34;1" dur="12s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Segment 2 Base -->
+    <rect x="150" y="24" width="105" height="3" rx="1.5" fill="#173B2A" />
+    <!-- Segment 2 Active Indicator (Fills 4s-8s) -->
+    <rect x="150" y="24" width="0" height="3" rx="1.5" fill="#F59E0B">
+      <animate attributeName="width" values="0;0;105;105;0" keyTimes="0;0.33;0.66;0.99;1" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.4;1;0.4;0.4" keyTimes="0;0.33;0.66;0.67;1" dur="12s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Segment 3 Base -->
+    <rect x="275" y="24" width="105" height="3" rx="1.5" fill="#173B2A" />
+    <!-- Segment 3 Active Indicator (Fills 8s-12s) -->
+    <rect x="275" y="24" width="0" height="3" rx="1.5" fill="#00E58B">
+      <animate attributeName="width" values="0;0;105;105" keyTimes="0;0.66;0.99;1" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.4;1;1" keyTimes="0;0.66;0.99;1" dur="12s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- ======================================== -->
+    <!-- SLIDE 01: AI & FULL-STACK PLATFORMS      -->
+    <!-- Visible from 0s to 4s                    -->
+    <!-- ======================================== -->
+    <g id="slide-01">
+      <animate attributeName="opacity" values="1;1;0;0;0;1" keyTimes="0;0.32;0.34;0.98;0.99;1" dur="12s" repeatCount="indefinite" />
+      
+      <!-- Huge Number 01 -->
+      <text x="32" y="148" font-family="'Space Grotesk', sans-serif" font-size="94" font-weight="900" fill="none" stroke="#38BDF8" stroke-width="2.2" letter-spacing="-2">
+        01
+      </text>
+
+      <!-- Target Radar Reticle (Top Right of Card) -->
+      <g transform="translate(325, 105)">
+        <!-- Outer Concentric Guide -->
+        <circle cx="0" cy="0" r="46" fill="none" stroke="#38BDF8" stroke-width="1.2" opacity="0.35" />
+        <!-- Inner Dotted Arc -->
+        <circle cx="0" cy="0" r="32" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="0" r="18" fill="none" stroke="#173B2A" stroke-width="1" />
+        <!-- Crosshairs -->
+        <line x1="-50" y1="0" x2="-40" y2="0" stroke="#38BDF8" stroke-width="1.5" />
+        <line x1="40" y1="0" x2="50" y2="0" stroke="#38BDF8" stroke-width="1.5" />
+        <line x1="0" y1="-50" x2="0" y2="-40" stroke="#38BDF8" stroke-width="1.5" />
+        <line x1="0" y1="40" x2="0" y2="50" stroke="#38BDF8" stroke-width="1.5" />
+        <!-- Center Blue Target Core -->
+        <circle cx="0" cy="0" r="5.5" fill="#38BDF8" filter="url(#radar-glow)">
+          <animate attributeName="r" values="4.5;6.5;4.5" dur="2s" repeatCount="indefinite" />
+        </circle>
+      </g>
+
+      <!-- Main Headline -->
+      <g transform="translate(32, 218)">
+        <text font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#F2F7F3" letter-spacing="1">
+          AI &amp; FULL-STACK
+        </text>
+        <text y="34" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#F2F7F3" letter-spacing="1">
+          PLATFORMS
+        </text>
+      </g>
+
+      <!-- Description Paragraph -->
+      <g transform="translate(32, 305)">
+        <text font-family="'Space Grotesk', sans-serif" font-size="14.5" fill="#94A3B8" font-weight="500">
+          <tspan x="0" y="0">Bridging Gemini models with reactive web systems.</tspan>
+          <tspan x="0" y="24">Built and deployed Cevora &amp; Lumini AI</tspan>
+          <tspan x="0" y="48">for placement preparation and curriculum analysis.</tspan>
+        </text>
+      </g>
+
+      <!-- Bottom Counter -->
+      <text x="32" y="415" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#38BDF8">
+        1 / 3
+      </text>
+    </g>
+
+    <!-- ======================================== -->
+    <!-- SLIDE 02: COMPETITIVE PROBLEM SOLVING    -->
+    <!-- Visible from 4s to 8s                    -->
+    <!-- ======================================== -->
+    <g id="slide-02" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.33;0.35;0.65;0.67;1" dur="12s" repeatCount="indefinite" />
+
+      <!-- Huge Number 02 -->
+      <text x="32" y="148" font-family="'Space Grotesk', sans-serif" font-size="94" font-weight="900" fill="none" stroke="#F59E0B" stroke-width="2.2" letter-spacing="-2">
+        02
+      </text>
+
+      <!-- Target Radar Reticle (Top Right of Card) -->
+      <g transform="translate(325, 105)">
+        <circle cx="0" cy="0" r="46" fill="none" stroke="#F59E0B" stroke-width="1.2" opacity="0.35" />
+        <circle cx="0" cy="0" r="32" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6">
+          <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="8s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="0" r="18" fill="none" stroke="#173B2A" stroke-width="1" />
+        <line x1="-50" y1="0" x2="-40" y2="0" stroke="#F59E0B" stroke-width="1.5" />
+        <line x1="40" y1="0" x2="50" y2="0" stroke="#F59E0B" stroke-width="1.5" />
+        <line x1="0" y1="-50" x2="0" y2="-40" stroke="#F59E0B" stroke-width="1.5" />
+        <line x1="0" y1="40" x2="0" y2="50" stroke="#F59E0B" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="5.5" fill="#F59E0B" filter="url(#radar-glow)">
+          <animate attributeName="r" values="4.5;6.5;4.5" dur="2s" repeatCount="indefinite" />
+        </circle>
+      </g>
+
+      <!-- Main Headline -->
+      <g transform="translate(32, 218)">
+        <text font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#F2F7F3" letter-spacing="1">
+          COMPETITIVE
+        </text>
+        <text y="34" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#F2F7F3" letter-spacing="1">
+          PROBLEM SOLVING
+        </text>
+      </g>
+
+      <!-- Description Paragraph -->
+      <g transform="translate(32, 305)">
+        <text font-family="'Space Grotesk', sans-serif" font-size="14.5" fill="#94A3B8" font-weight="500">
+          <tspan x="0" y="0">Data structures, algorithm optimization &amp; logic.</tspan>
+          <tspan x="0" y="24">2nd in CodeRace competitive programming,</tspan>
+          <tspan x="0" y="48">Top 44 in Tetrathon among 160+ hackathon teams.</tspan>
+        </text>
+      </g>
+
+      <!-- Bottom Counter -->
+      <text x="32" y="415" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#F59E0B">
+        2 / 3
+      </text>
+    </g>
+
+    <!-- ======================================== -->
+    <!-- SLIDE 03: DEVELOPER COMMUNITY            -->
+    <!-- Visible from 8s to 12s                   -->
+    <!-- ======================================== -->
+    <g id="slide-03" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0;1;0" keyTimes="0;0.65;0.66;0.68;0.98;1" dur="12s" repeatCount="indefinite" />
+
+      <!-- Huge Number 03 -->
+      <text x="32" y="148" font-family="'Space Grotesk', sans-serif" font-size="94" font-weight="900" fill="none" stroke="#00E58B" stroke-width="2.2" letter-spacing="-2">
+        03
+      </text>
+
+      <!-- Target Radar Reticle (Top Right of Card) -->
+      <g transform="translate(325, 105)">
+        <circle cx="0" cy="0" r="46" fill="none" stroke="#00E58B" stroke-width="1.2" opacity="0.35" />
+        <circle cx="0" cy="0" r="32" fill="none" stroke="#00E58B" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="0" r="18" fill="none" stroke="#173B2A" stroke-width="1" />
+        <line x1="-50" y1="0" x2="-40" y2="0" stroke="#00E58B" stroke-width="1.5" />
+        <line x1="40" y1="0" x2="50" y2="0" stroke="#00E58B" stroke-width="1.5" />
+        <line x1="0" y1="-50" x2="0" y2="-40" stroke="#00E58B" stroke-width="1.5" />
+        <line x1="0" y1="40" x2="0" y2="50" stroke="#00E58B" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="5.5" fill="#00E58B" filter="url(#radar-glow)">
+          <animate attributeName="r" values="4.5;6.5;4.5" dur="2s" repeatCount="indefinite" />
+        </circle>
+      </g>
+
+      <!-- Main Headline -->
+      <g transform="translate(32, 218)">
+        <text font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#F2F7F3" letter-spacing="1">
+          COMMUNITY &amp;
+        </text>
+        <text y="34" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#F2F7F3" letter-spacing="1">
+          LEADERSHIP
+        </text>
+      </g>
+
+      <!-- Description Paragraph -->
+      <g transform="translate(32, 305)">
+        <text font-family="'Space Grotesk', sans-serif" font-size="14.5" fill="#94A3B8" font-weight="500">
+          <tspan x="0" y="0">Core Team Member • Code Vimarsh MSU Baroda.</tspan>
+          <tspan x="0" y="24">Advancing developer growth through hands-on</tspan>
+          <tspan x="0" y="48">workshops &amp; peer hackathon collaborations.</tspan>
+        </text>
+      </g>
+
+      <!-- Bottom Counter -->
+      <text x="32" y="415" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#00E58B">
+        3 / 3
+      </text>
+    </g>
+  </g>
+
+  <!-- Holographic Shimmer Overlay (Like Lanyard & Connect Cards) -->
+  <rect width="1000" height="560" rx="20" fill="url(#about-shimmer-sweep)" pointer-events="none" />
+</svg>
