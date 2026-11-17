@@ -86,10 +86,19 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/contributions/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/contributions/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake Grid" src="assets/contributions/github-contribution-grid-snake-dark.svg" width="100%">
-  </picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/shiv-05-07/shiv-05-07/output/github-contribution-grid-snake-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/shiv-05-07/shiv-05-07/output/github-contribution-grid-snake.svg"
+  />
+  <img
+    alt="GitHub Contribution Snake"
+    src="https://raw.githubusercontent.com/shiv-05-07/shiv-05-07/output/github-contribution-grid-snake.svg"
+  />
+</picture>
 </p>
 
 <p align="center">
